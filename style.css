@@ -1,0 +1,227 @@
+body {
+  box-sizing: border-box;
+}
+#container-fluid {
+  margin: 0;
+  padding: 0;
+}
+.fullStackDeveloper {
+  border-left: 3px solid black;
+  padding-left: 5px;
+}
+.name {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+.cv {
+  text-decoration: none;
+  border-bottom: 3px solid green;
+  margin-left: 20px;
+  color: black;
+}
+.cv:hover {
+  color: black;
+}
+.intro {
+  /*font-family: "Lobster", cursive;*/
+  font-family: "Abril Fatface", cursive;
+  font-size: 60px;
+}
+.intro-container {
+  min-height: 100vh;
+  background: #ffe5b9;
+}
+
+.tools {
+  min-height: 80px;
+  /*overflow:auto;*/
+  border-radius: 21px;
+  background: #bdff00;
+  box-shadow: 13px 13px 26px #969696, -13px -13px 26px #ffffff;
+  justify-content: space-around;
+}
+.tools img {
+  border-radius: 10px;
+  height: 100px;
+  width: 150px;
+  border: 2px solid black;
+  object-fit: fill;
+}
+@media (max-width: 600px) {
+  .widget {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 40vh;
+    width: 100%;
+    height: 60px;
+    z-index: 1;
+    background: #2b4f60;
+  }
+  .fa {
+    color: white;
+  }
+
+  .introContent .avatar > img {
+    width: 250px;
+    height: auto;
+  }
+  .intro-container > img {
+    display: none;
+  }
+  .intro-container {
+    padding-top: 30px;
+  }
+}
+
+@media (min-width: 600px) {
+  .widget {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid black;
+    border-radius: 10px;
+    flex-direction: column;
+    position: fixed;
+    margin-top: 40vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px;
+    width: 51px;
+    height: 200px;
+    z-index: 1;
+  }
+  .fa {
+    color: blue;
+  }
+}
+/*CHIP*/
+.chipContainer {
+  background: #f1e17c;
+  height: auto;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border-radius: 18px;
+  box-shadow: 4px 3px 1px 0px #757514;
+  font-family: "Averia Serif Libre", cursive;
+}
+
+.chipIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 4px;
+}
+.chipIcon img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 5px;
+}
+
+.chipContent {
+  display: flex;
+  align-items: center;
+}
+
+.projectIcons {
+  width: 70px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.projectIcons img {
+  border-radius: 10px;
+  width: 50px;
+  height: 30px;
+}
+.footer {
+  height: 500px;
+}
+
+/*contact form */
+
+.parent {
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  border-radius: 21px;
+  padding: 5px;
+}
+
+.name > input,
+.email > input,
+.message > textarea {
+  border: none;
+  border-radius: 21px;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+ul > li {
+  list-style: none;
+}
+.fa-download {
+  font-weight: 200px;
+}
+
+/*toolbox*/
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+h6 {
+  padding: 2px 0 0 2px;
+}
+.toolbox {
+  display: flex;
+  flex-wrap: wrap;
+  background: lightcyan;
+}
+.toolbox > div {
+  flex: 1 0 21%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toolbox > div > img:hover {
+  animation: spin 2s infinite;
+}
+@media (min-width: 800px) {
+  h6 {
+    display: none;
+  }
+
+  .toolbox > div:hover h6 {
+    display: block;
+    transition-timing-function: ease-in;
+  }
+}
+/* end of toolbox*/
+
+/*footer*/
+footer {
+  height: 300px;
+  background: #a6a9b6;
+}
+/*end of footer*/
